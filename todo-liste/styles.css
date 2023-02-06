@@ -1,0 +1,192 @@
+/* ------ general -----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* ---- body ------*/
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    background-image: url(./image/cyberpunk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ------ container -----*/
+
+#container {
+    position: relative;
+    width: 400px;
+    margin: 100px auto;
+}
+
+#container:before, #container:after {
+    content: '';
+    position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+#container:after {
+    filter: blur(50px);
+}
+
+/*-------- le haut/header --------*/
+
+#header {
+    width: 400px;
+    height: 200px;
+    background-image: url('./image/moon.jpg');
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.clear {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+.clear i {
+    font-size: 35px;
+    color: #fff;
+}
+
+.clear i:hover {
+    cursor: pointer;
+    text-shadow: 2px 4px 6px #fff;
+    transform: rotate(45deg);
+}
+
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 35px;
+}
+
+/*--------- content --------*/
+
+.content {
+    width: 400px;
+    height: 370px;
+    max-height: 370px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    width: 400px;
+    height: 50px;
+    min-height: 50px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item i.ci {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 5px;
+    left: 15px;
+    top: 13px;
+}
+
+.item i.ci:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    color: #6eb200;
+}
+
+.item p.text {
+    position: absolute;
+    font-size: 25px;
+    left: 60px;
+    top: 10px;
+    background-color: #fff;
+    max-width: 285px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 30px;
+    right: 15px;
+    top: 10px;
+}
+
+.item i.de:hover {
+   color: red;
+   cursor: pointer;
+}
+
+/*------ add to do -------*/
+
+.add-to-do {
+    position: relative;
+    width: 380px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.add-to-do i {
+    position: absolute;
+    font-size: 30px;
+    color: #4162f6;
+}
+
+.add-to-do input {
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.add-to-do input::-webkit-input-placeholder {
+    font-size: 20px;
+}

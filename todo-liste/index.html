@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo liste</title>
+  </head>
+  <body>
+
+    <!--La todo liste-->
+    <div id="container">
+
+      <!--Le haut-->
+      <div id="header">
+
+        <!--bouton effacer-->
+        <div class="clear" id="clear">
+          <i class="fa-solid fa-rotate"></i> <!--image fleche tournantes-->
+        </div>
+
+        <!--La date du jour-->
+        <div id="date"></div>
+      </div>
+
+      <!--Contient la liste -->
+      <div class="content">
+        <ul id="list">
+         
+
+          </li>
+        </ul>
+      </div>
+        <!--Ajout à la to do liste-->
+        <div class="add-to-do">
+          <i class="fa-solid fa-circle-plus"></i>
+          <input type="text" placeholder="Ajout liste" id="input" />
+        </div>
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
